@@ -149,6 +149,10 @@
   ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .5rem; max-width: 66ch; color: var(--ink-soft); }
   li::marker { color: var(--muted); }
 
+  a { color: var(--signal); text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
   code {
     font-family: "IBM Plex Mono", monospace;
     font-size: .86em; background: var(--rule-soft);
@@ -248,7 +252,7 @@
   <div class="brief">
     <div><span class="lbl">주력</span><span class="val">나의 스크랩</span></div>
     <div><span class="lbl">2순위 · 조건부</span><span class="val">루미</span></div>
-    <div><span class="lbl">보류</span><span class="val">insquare</span></div>
+    <div><span class="lbl">반쪽 출시</span><span class="val">insquare</span></div>
     <div><span class="lbl">예산</span><span class="val">월 0원</span></div>
     <div><span class="lbl">유일한 자원</span><span class="val">당신의 시간</span></div>
   </div>
@@ -282,8 +286,8 @@
               </tr>
               <tr>
                 <td class="name">insquare</td>
-                <td><span class="tag c">보류</span></td>
-                <td>안드로이드 비공개 테스트 단계. <strong>아직 홍보할 대상이 없습니다.</strong></td>
+                <td><span class="tag c">반쪽</span></td>
+                <td>App Store에는 출시됐지만 Play는 비공개 테스트. 초대 기반 앱인데 <strong>초대받은 안드로이드 사용자가 설치할 수 없습니다.</strong></td>
                 <td>테스터 12명 확보</td>
               </tr>
             </tbody>
@@ -381,10 +385,11 @@
 
     <!-- insquare -->
     <section>
-      <div class="rail">보류 · insquare</div>
+      <div class="rail">반쪽 출시 · insquare</div>
       <div class="body">
-        <h2>지금 필요한 건 마케팅이 아니라 출시다</h2>
-        <p>insquare는 안드로이드 <strong>비공개 테스트 중</strong>입니다. 프로덕션에 올라가 있지 않으면 홍보로 데려온 사람이 설치할 수 없습니다. 지금 홍보에 쓰는 모든 시간은 그대로 버려집니다.</p>
+        <h2>초대로 퍼지는 앱인데 절반이 막혀 있다</h2>
+        <p>insquare는 <strong>App Store에는 이미 출시되어 있습니다</strong>(<code>id6771190865</code>). 막힌 건 안드로이드 한쪽입니다 — Play는 아직 비공개 테스트라 공개 스토어 페이지 자체가 존재하지 않습니다.</p>
+        <p>그런데 이 앱에서는 그게 단순한 "플랫폼 하나 부족"이 아닙니다. insquare가 퍼지는 유일한 경로는 <strong>초대</strong>인데, 초대받은 사람의 절반은 안드로이드를 씁니다. 그 사람들은 링크를 받아도 설치할 방법이 없습니다. <strong>바이럴 경로 위에 정확히 벽이 서 있는 셈</strong>이라, iOS만으로 집단을 시딩하면 대부분의 초대가 그 벽에 부딪혀 끊깁니다.</p>
 
         <div class="note">
           <span class="lbl">프로덕션까지의 실제 요건</span>
@@ -399,7 +404,7 @@
         </ul>
 
         <h3>출시 후를 위한 구조적 진단</h3>
-        <p>프로덕션에 올라간 뒤에도 insquare는 0원 예산에서 가장 어려운 앱입니다. <em>"검색되는 공개 피드가 없습니다"</em>는 프라이버시 설계로는 훌륭하지만 <strong>성장 관점에서는 바이럴 경로가 초대 하나뿐</strong>이라는 뜻입니다. 게다가 방에 사람이 없으면 재방문할 이유가 없어서, 사용자가 흩어지면 그대로 죽습니다.</p>
+        <p>Play 프로덕션에 올라간 뒤에도 insquare는 0원 예산에서 가장 어려운 앱입니다. <em>"검색되는 공개 피드가 없습니다"</em>는 프라이버시 설계로는 훌륭하지만 <strong>성장 관점에서는 바이럴 경로가 초대 하나뿐</strong>이라는 뜻입니다. 게다가 방에 사람이 없으면 재방문할 이유가 없어서, 사용자가 흩어지면 그대로 죽습니다.</p>
         <div class="note go">
           <span class="lbl">유일하게 통하는 방식 — 한 집단만</span>
           <p>전국 대상 홍보를 하지 마세요. <strong>이미 함께 사진을 찍는 집단 하나</strong>를 통째로 넣으세요. 동아리 하나, 수업 하나, 여행 가는 친구 그룹 하나, 동호회 하나. 100명이 전국에 흩어지면 죽은 앱이고 <strong>한 집단에 20명이 모이면 살아있는 앱</strong>입니다. 초대 전용 구조는 확산은 느려도, 한 집단만 뚫으면 그 안에서 스스로 퍼집니다. "정각마다 바뀌는 한 장"은 같은 자리에 있는 사람들에게만 의미가 있습니다.</p>
@@ -534,6 +539,19 @@
           <li><strong>소개 사이트의 누수를 먼저 막으세요.</strong> 루미 페이지에 스토어 링크가 없습니다. 관심을 가진 사람이 설치할 방법이 페이지에 없다는 뜻입니다. 세 페이지 모두 상단에 App Store · Google Play 배지를 배치하세요.</li>
           <li>주력 앱이 뜨면 그 트래픽이 나머지로 흐릅니다. <strong>이게 "1개에 집중"이 3개 다 미는 것보다 나은 이유</strong>입니다.</li>
         </ul>
+
+        <h3>스토어 주소 (2026-08-30 확인)</h3>
+        <ul>
+          <li><strong>나의 스크랩</strong> — <a href="https://play.google.com/store/apps/details?id=com.jinmo.myscrap">Google Play</a> · <a href="https://apps.apple.com/kr/app/id6793531420">App Store</a></li>
+          <li><strong>루미</strong> — <a href="https://play.google.com/store/apps/details?id=com.jinmo78.lumi">Google Play</a> · <a href="https://apps.apple.com/kr/app/id6794529020">App Store</a></li>
+          <li><strong>insquare</strong> — <a href="https://apps.apple.com/kr/app/id6771190865">App Store</a>. Play는 비공개 테스트라 공개 주소가 없습니다.</li>
+        </ul>
+        <p style="font-size:.85rem;color:var(--muted)">Play 주소는 <code>details?id=</code> 뒤에 Play Console 앱 목록에 표시된 패키지명을 붙이면 됩니다. App Store 주소는 <code>apps.apple.com/kr/app/id</code> 뒤에 Apple ID를 붙이며, Apple ID는 App Store Connect의 앱 → 앱 정보에서 확인합니다.</p>
+
+        <div class="note stop">
+          <span class="lbl">루미 — 스토어마다 이름이 다릅니다</span>
+          <p>Play에는 <strong>"루미"</strong>, App Store에는 <strong>"루미 이야기"</strong>로 등록되어 있습니다. 브랜드 검색이 두 갈래로 쪼개지고, 콘텐츠에서 어느 이름을 써도 절반은 못 찾습니다. <strong>하나로 통일하세요.</strong> 검색 관점에서는 "루미"가 너무 흔한 단어라 <strong>"루미 이야기" 쪽이 유리</strong>합니다 — 경쟁이 적고 앱 성격도 드러납니다.</p>
+        </div>
       </div>
     </section>
 
@@ -552,7 +570,7 @@
                 <li>Firebase / GA4를 앱 전체에 연결, D1 · D7 · D30 표 작성</li>
                 <li><strong>루미 단위 경제성 계산</strong> — 광고 1회 수익 vs 열어주는 대화의 토큰 원가</li>
                 <li>소개 사이트 세 페이지에 스토어 배지 추가 (루미 링크 누락 수정)</li>
-                <li>insquare 개발자 계정 유형 확인 → 테스터 요건 해당 여부 판단</li>
+                <li>insquare — 개발자 계정이 개인 계정이므로 테스터 12명 요건 해당. 즉시 모집 착수</li>
               </ul>
             </div>
           </div>
@@ -634,7 +652,7 @@
       <div class="body">
         <h2>하지 말 것</h2>
         <ul>
-          <li><strong>insquare 홍보</strong> — 프로덕션에 없는 앱은 설치가 불가능합니다. 지금 쓰는 모든 시간이 버려집니다.</li>
+          <li><strong>insquare 대중 홍보</strong> — 안드로이드 사용자가 설치할 수 없어 초대의 절반이 끊깁니다. Play 프로덕션 승격까지는 iOS 단일 집단 시딩만.</li>
           <li><strong>루미 유입 확대 (계산 전)</strong> — 단위 경제성이 적자면 성공할수록 손해입니다.</li>
           <li><strong>App Store 키워드에 경쟁사 상표</strong> — 심사 리젝 사유입니다. 스토어 밖 콘텐츠에서만 쓰세요.</li>
           <li><strong>리뷰 구매 · 설치 부스팅</strong> — 계정 정지 시 앱 3개가 한 번에 사라집니다.</li>
